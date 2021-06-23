@@ -1,0 +1,70 @@
+
+windturb1_40007       风向(度)
+windturb1_40005    1s风速(m/s) 
+windturb1_40006       5min平均风速(m/s)
+windturb1_40008    转速(r/min)
+windturb1_40009   桨矩角(度)
+windturb1_40260 功率给定(kw)
+windturb1_40071   有功功率(kw)
+windturb1_40072  无功功率(kVar)
+windturb1_40075  累计发电量(kwh)
+windturb1_40065  电网电压U(V)
+windturb1_40066   电网电压V(V)
+windturb1_40067  电网电压W(V)
+windturb1_40068  输出电流U(A)
+windturb1_40069  输出电流V(A)
+windturb1_40070    输出电流W(A)
+windturb1_40073   功率因数      
+    windturb1_40001          机组控制方式状态字_1本地2远程
+   windturb1_40002               机组运行模式状态字_1手动2自动3维护4停机
+    windturb1_40003              机组运行模式状态字_1手动2自动3维护4停机5急停6空转
+     windturb1_40004                报警信息状态字_1正常2警告3故障
+
+
+
+
+
+
+第一次转发
+1st:12 byte 24 word 12
+windturb1_40001          机组控制方式状态字_1本地2远程
+   windturb1_40002               机组运行模式状态字_1手动2自动3维护4停机
+    windturb1_40003             机组运行状态状态字_1启动2运行3暂停4停机5急停6空转
+     windturb1_40004                报警信息状态字_1正常2警告3故障
+windturb1_40007       风向(度)
+windturb1_40005    1s风速(m/s) 
+windturb1_40006       5min平均风速(m/s)
+windturb1_40008    转速(r/min)
+windturb1_40009   桨矩角(度)
+  windturb1_40010               报警信息1状态字_十进制数值
+
+第二次转发：
+2nd:5 byte  22  word 11
+
+
+\\windturb1_40260 功率给定(kw)
+windturb1_40071   有功功率(kw)
+windturb1_40072  无功功率(kVar)
+windturb1_40075  累计发电量(kwh)
+windturb1_40065  电网电压U(V)
+windturb1_40066   电网电压V(V)
+windturb1_40067  电网电压W(V)
+windturb1_40068  输出电流U(A)
+windturb1_40069  输出电流V(A)
+windturb1_40070    输出电流W(A)
+windturb1_40073   功率因数 
+
+
+
+
+第三次转发：（完成后一轮数据就传完了）
+3rd:11 byte  10  word5
+    windturb1_40257     远程急停控制字0无操作1急停2停止急停
+ //windturb1_40257机组运行模式选择1=手动模式；2=自动模式(启动)；3=维护模式；4=停机
+windturb1_40259  复位按钮控制字0无操作1复位操作
+windturb1_40260  有功给定(kw)
+windturb1_40261   通讯循环检测字(0,1循环代表通讯正常)
+
+
+
+
